@@ -1,5 +1,13 @@
-# my-vpcs
-A working example of how to have a single code Terraform code base, with differing variables for each landscape of your environment or application.
+# Terraform Cloud Variables (Multiple Workspaces Per Repo with local variables file)
+A working example of how to have a Terraform code base in a single repo, with differing variables for each landscape of your code or application. This is based on the HashiCorp recommended approach to managing workspaces in TFC (https://www.terraform.io/docs/cloud/workspaces/repo-structure.html#structuring-repos-for-multiple-environments_)
+
+```
+├── README.md
+├── variables.tf
+├── main.tf
+├── outputs.tf
+```
+This guide removes the need to configure a long list of variables outside of you code (VCS), and therefore makes it simpler to keep code and variables within the same repo, managed by the same people in a way that is easy to consume (single workflow)
 
 ### Prerequisites
 To run this demo or something like it you will need:
