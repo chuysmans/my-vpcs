@@ -5,6 +5,15 @@ variable "environment" {
     default = "test"
 }
 
+variable "owner" {
+    default = "Cameron Huysmans"
+}
+
+variable "ttl" {
+    default  = "8"
+}
+
+
 #
 # Contains the configuration based on the environment variable.
 # The name of the environment is the key for the map see outputs.tf
@@ -12,23 +21,26 @@ variable "environment" {
 #
 variable "configuration" {
   default = {
-    test = {
+    test = { # TEST VARIABLES
       size = "a1.medium",
-      name = "test",
+      name = "Test",
       vpc_cidr = "10.2.0.0/16",
-      nat_gateway = "true"
+      nat_gateway = "true",
+      vpn_gateway = "true"
     }
-    staging = {
+    staging = { # STAGING VARIABLES
       size = "a1.large",
-      name = "staging",
+      name = "Staging",
       vpc_cidr = "10.1.0.0/16",
-      nat_gateway = "true"
+      nat_gateway = "true",
+      vpn_gateway = "true"
     }
-    production = {
+    production = { # PRODUCTION VARIABLES
       size = "a1.xlarge",
-      name = "production",
+      name = "Production",
       vpc_cidr = "10.0.0.0/16",
       nat_gateway = "false"
+      vpn_gateway = "false"
     }
   }
 }
