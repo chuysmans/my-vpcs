@@ -118,12 +118,17 @@ Once this is done we can make some additions to TFC. To build out the demo you'l
 1. Select "Queue Plan" for the workspace
 1. Repeat these steps for both staging and production
 
+![alt text](images/prod.workspace.variables.png "Prod Workspace Variables")
+
+
 Within TFC, you should now see your three workspaces, all linked to the same repo. Once the initialisation of the workspace (first Queue Plan) is completed, the workspaces will now run speculative plans based on changes to the repo.
+
+![alt text](images/my.workspaces.png "My Workspaces")
 
 This a great way to maintain a single code base, promote code through environments with a single variables file.
 
 Note:
-* Code can be promoted by simply discarding the plans which are not required. 
+* Code can be promoted by simply discarding the plans which are not required.
 * Within TFC there is currently a soft limit of 1 concurrent plan per cloud account, therefore only one workspace will run the plan at a time.
 
 
