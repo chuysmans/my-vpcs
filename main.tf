@@ -1,7 +1,7 @@
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name = "${lookup(var.configuration, var.environment).names}"
+  name = "${lookup(var.configuration, var.environment).name}"
   cidr = "${lookup(var.configuration, var.environment).vpc_cidr}"
 
   azs             = ["ap-southeast-2a", "ap-southeast-2b", "ap-southeast-2c"]
