@@ -1,7 +1,7 @@
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name = "${lookup(var.configuration, var.environment).name}"
+  name = "${lookup(var.configuration, var.environment).names}"
   cidr = "${lookup(var.configuration, var.environment).vpc_cidr}"
 
   azs             = ["ap-southeast-2a", "ap-southeast-2b", "ap-southeast-2c"]
@@ -15,6 +15,5 @@ module "vpc" {
     Environment = "${lookup(var.configuration, var.environment).name}"
     Owner = var.owner
     TTL = var.ttl
-    Demo = "yes"
   }
 }
