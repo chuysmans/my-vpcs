@@ -23,15 +23,15 @@ variable "configuration" {
   default = {
     dev = { # TEST VARIABLES
       size = "a1.medium",
-      name = "Test",
-      vpc_cidr = "10.2.0.0/16",
+      name = "Development",
+      vpc_cidr = "10.0.0.0/16",
       nat_gateway = "false",
       vpn_gateway = "false"
     }
     test = { # STAGING VARIABLES
       size = "a1.large",
-      name = "Staging",
-      vpc_cidr = "10.1.0.0/16",
+      name = "Test",
+      vpc_cidr = "10.0.0.0/16",
       nat_gateway = "false",
       vpn_gateway = "false"
     }
