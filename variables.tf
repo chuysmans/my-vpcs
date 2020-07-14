@@ -26,21 +26,24 @@ variable "configuration" {
       name = "Development",
       vpc_cidr = "10.0.0.0/16",
       nat_gateway = "false",
-      vpn_gateway = "false"
+      vpn_gateway = "false",
+      classfication = "public"
     }
     test = { # STAGING VARIABLES
       size = "a1.large",
       name = "Test",
       vpc_cidr = "10.0.0.0/16",
       nat_gateway = "false",
-      vpn_gateway = "false"
+      vpn_gateway = "false",
+      classfication = "internal"
     }
     prod = { # PRODUCTION VARIABLES
       size = "a1.xlarge",
       name = "Production",
       vpc_cidr = "10.0.0.0/16",
       nat_gateway = "false"
-      vpn_gateway = "false"
+      vpn_gateway = "false",
+      classfication = "confidential"
     }
   }
 }
