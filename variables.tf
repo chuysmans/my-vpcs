@@ -6,7 +6,7 @@ variable "environment" {
 }
 
 variable "owner" {
-    default = "Moayad"
+    default = "Moayad Ismail"
 }
 
 variable "ttl" {
