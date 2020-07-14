@@ -25,15 +25,15 @@ variable "configuration" {
       size = "a1.medium",
       name = "Test",
       vpc_cidr = "10.2.0.0/16",
-      nat_gateway = "true",
-      vpn_gateway = "true"
+      nat_gateway = "false",
+      vpn_gateway = "false"
     }
     test = { # STAGING VARIABLES
       size = "a1.large",
       name = "Staging",
       vpc_cidr = "10.1.0.0/16",
-      nat_gateway = "true",
-      vpn_gateway = "true"
+      nat_gateway = "false",
+      vpn_gateway = "false"
     }
     prod = { # PRODUCTION VARIABLES
       size = "a1.xlarge",
