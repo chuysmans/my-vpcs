@@ -2,11 +2,11 @@
 # The name of the environment, should be set on the TFC workspace
 #
 variable "environment" {
-    default = "test"
+    default = "dev"
 }
 
 variable "owner" {
-    default = "Cameron Huysmans"
+    default = "Moayad"
 }
 
 variable "ttl" {
@@ -21,21 +21,21 @@ variable "ttl" {
 #
 variable "configuration" {
   default = {
-    test = { # TEST VARIABLES
+    dev = { # TEST VARIABLES
       size = "a1.medium",
       name = "Test",
       vpc_cidr = "10.2.0.0/16",
       nat_gateway = "true",
       vpn_gateway = "true"
     }
-    staging = { # STAGING VARIABLES
+    test = { # STAGING VARIABLES
       size = "a1.large",
       name = "Staging",
       vpc_cidr = "10.1.0.0/16",
       nat_gateway = "true",
       vpn_gateway = "true"
     }
-    production = { # PRODUCTION VARIABLES
+    prod = { # PRODUCTION VARIABLES
       size = "a1.xlarge",
       name = "Production",
       vpc_cidr = "10.0.0.0/16",
