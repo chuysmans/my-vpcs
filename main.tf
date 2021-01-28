@@ -15,5 +15,6 @@ module "vpc" {
     Environment = "${lookup(var.configuration, var.environment).name}"
     Owner = var.owner
     TTL = var.ttl
+    ttl = var.ttl
   }
 }
